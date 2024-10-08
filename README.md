@@ -1,4 +1,4 @@
-# openfoodfacts-swift
+# OpenFoodFacts-Swift
 
 
 # Open Food Facts - Swift

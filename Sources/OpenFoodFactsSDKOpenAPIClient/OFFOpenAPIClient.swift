@@ -14,7 +14,7 @@ import HTTPTypes
 /// and contribute to the products database. You can create great apps to
 /// help people make better food choices and also provide data to enhance the database.
 ///
-public struct OpenFoodFactsAPI: APIProtocol {
+public struct OFFOpenAPIClient: APIProtocol {
     /// The underlying HTTP client.
     private let client: UniversalClient
     /// Creates a new client.
