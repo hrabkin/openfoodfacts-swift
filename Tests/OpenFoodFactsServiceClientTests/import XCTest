@@ -1,0 +1,22 @@
+import XCTest
+@testable import OpenFoodFactsServiceClient
+
+final class OpenFoodFactsServiceClientTests: XCTestCase {
+
+    func testExampleEndpoint() async throws {
+        // Example test for a client endpoint
+        let client = OpenFoodFactsServiceClient()
+        
+        // Assume `fetchProduct` is a function in your client to fetch product details
+        let product = try await client.fetchProduct(barcode: "3017620422003")
+        
+        // Check that the product details are correct (replace with actual checks)
+        XCTAssertEqual(product.barcode, "3017620422003")
+        XCTAssertNotNil(product.name)
+    }
+
+    func testAnotherFunction() {
+        // Write tests for other functions in OpenFoodFactsServiceClient
+    }
+}
+

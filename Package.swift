@@ -13,7 +13,7 @@ let package = Package(
         .library(
             name: "OpenFoodFactsSDK",
             targets: ["OpenFoodFactsSDK"]),
-        .executable(
+        .library(
             name: "OpenFoodFactsServiceClient",
             targets: ["OpenFoodFactsServiceClient"]
         )
@@ -37,7 +37,7 @@ let package = Package(
             name: "OpenFoodFactsSDK-iosTests",
             dependencies: ["OpenFoodFactsSDK"]
         ),
-        .executableTarget(
+        .target(
             name: "OFFOpenAPIClient",
             dependencies: [
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
@@ -47,6 +47,11 @@ let package = Package(
                 .plugin(name: "OpenAPIGenerator", package: "swift-openapi-generator"),
             ],
             path: "Sources/OpenFoodFactsSDKOpenAPIClient"
+        ),
+        .testTarget(
+            name: "OpenFoodFactsServiceClientTests",
+            dependencies: ["OpenFoodFactsServiceClient"],
+            path: "Tests/OpenFoodFactsServiceClientTests"
         )
     ]
 )
